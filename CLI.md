@@ -1,0 +1,14 @@
+# Download and install CLI
+Since Cloud Foundry is open source software (OSS), you can download the latest release of components such as the cf CLI from GitHub and install them directly:
+> 1. Go to https://github.com/cloudfoundry/cli/releases.
+> 2. Download the installer for your platform, such as macOS X, Windows, Debian, or Red Hat.
+
+Install the cf CLI by following the instructions for your operating system:
++ Install cf CLI on Windows
+  > 1. Unpack the .zip file.
+  > 2. Double-click the cf CLI executable.
+  > 3. When prompted, click on Install, and then Close.
++ Install cf CLI on macOS X and Linux
+  > 1. Open the .pkg | .deb | .rpm file.
+  > 2. Follow the package installer wizard.
+  > 3. When prompted, click on Install, then Close.
