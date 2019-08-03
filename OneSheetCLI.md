@@ -22,7 +22,8 @@ This is a summary for ofen used CLI targeting for SAP developers to search and l
 **Unbind service** ` cf bind-service APP_NAME SERVICE_INSTANCE`
 
 **Update service** `cf update-service SERVICE_INSTANCE [-p NEW_PLAN] [-c PARAMETERS_AS_JSON] [-t TAGS]`
-Example: `cf update-service mydb -b '{"ram_gb": 4}'
+
+Example: `cf update-service mydb -b '{"ram_gb": 4}'`
 
 **Delete service instance** `cf delete-service SERVICE_INSTANCE [-f]`
 ### Application Management
