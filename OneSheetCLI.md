@@ -32,6 +32,7 @@ This is a summary for ofen used CLI targeting for SAP developers to search and l
 	list all application in the current space
 
 + **Display app information** `cf app APP`
+
 	Display health status of the applicaiton instance
 
 + **push app to CF** ```cf push```
@@ -42,3 +43,6 @@ This is a summary for ofen used CLI targeting for SAP developers to search and l
 
 + **Delete app** `cf delete APP [-f] [-r]`
 ## SAP MTA (Multi-Target Applicaiton) Plugin CLI
+**Build MTA artifact (.mtar)** `java -jar [path to mta.jar] –-[option][=arguments] [command]` 
+
+Example: `java -jar mta_archive_builder-1.1.7.jar --build-target CF --mtar ./target/tkm-srv.mtar build`
