@@ -1,4 +1,7 @@
 # Cloud Foundry CLI
+It's for cloud foundry beginners.
+* Installing Cloud foundry CLI (cloud command line)
+* Pushing simple app to Cloud Foundry
 ## Download and Install
 Since Cloud Foundry is open source software (OSS), you can download the latest release of components such as the cf CLI from GitHub and install them directly:
 > 1. Go to https://github.com/cloudfoundry/cli/releases.
