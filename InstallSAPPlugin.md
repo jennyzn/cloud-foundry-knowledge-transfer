@@ -1,5 +1,6 @@
 ## Configure Local Envioronment
-### MTA Pulgin 
+Install SAP related plugins
+## MTA Pulgin 
 Multi-Target Application Cloud Foundry CLI Plugin (CF MTA Plugin)
 The Multi-Target Application Cloud Foundry CLI Plugin is used to perform operations on multi-target applications (MTAs) such as deploying, removing, viewing, etc.
 
@@ -17,7 +18,7 @@ Download logs of multi-target app operation:
 $cf dmol -i <operation_id>
 ```
 
-### MTA Builder
+## MTA Builder
  The multi-target application archive builder is a standalone command-line tool that builds a deployment-ready multi-target application (MTA) archive .mtar file from the artifacts of an MTA project according to the project’s MTA development descriptor (mta.yaml file).
 The archive builder is used on a file system independently of the development environment in which the application project has been created. The build process and the resulting MTA archive depend on the target platform on which the archive is deployed.
 The currently supported target platforms are SAP Cloud Platform (both the Neo and Cloud Foundry environments) and SAP HANA XS advanced model.
@@ -30,4 +31,22 @@ More Informaiton, see the [Multi-target Application Archive Builder user guide](
 builde .mtar 
 ```
 java -jar mta_archive_builder-1.1.19.jar --build-target CF --mtar ./target/CalmMTA.mtar build
+```
+
+## How to compile CDS model locally
+1. Install node.js version 8 or higher. Execute the following command to check the node version:
+```bash
+node -v
+```
+2. Configure the NPM registry by executing the following command:
+```bash
+npm config set @sap:registry https://npm.sap.com
+```
+3. Install the CDS command-line tools.
+```bash
+npm i -g @sap/cds
+```
+4. Check the installation by running the following command:
+```bash
+cds --version
 ```

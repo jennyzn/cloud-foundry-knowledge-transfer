@@ -48,23 +48,31 @@ This is a summary for ofen used CLI targeting for SAP developers to search and l
 	Example: `java -jar mta_archive_builder-1.1.7.jar --build-target CF --mtar ./target/tkm-srv.mtar build`
 
 ## Buid and deploy CAP-based application
-1. Firstly refer to <https://github.wdf.sap.corp/SolmanChina/Template_CAP_Spring_Boot> to install all necessary tools e.g. nodejs, CDS builder, CF CMD plugin for MTA deploy.
-2. Under root folder, build all your CDS files. Run:
+### Prerequisites
+How to install? See [InstallSAPPlugin.md](./InstallSAPPlugin.md)
+
+1.MTA Plugin
+
+2.MTA Builder
+
+3.CDS Builder
+### Steps
+1. Under root folder, build all your CDS files. Run:
 ```bash
 cds build
 ```
 
-3. Under "srv", build your Spring Boot application. Run:
+2. Under "srv", build your Spring Boot application. Run:
 ```bash
 mvn package
 ```
 
-4. Under root folder, build the MTA artifact. Run:
+3. Under root folder, build the MTA artifact. Run:
 ```bash
 java -jar mta_archive_builder-1.1.7.jar --build-target CF --mtar ./target/tkm-srv.mtar build
 ```
 
-5. Under root folder, deploy the MTA artifact. Run:
+4. Under root folder, deploy the MTA artifact. Run:
 ```bash
 cf deploy target/tkm-srv.mtar
 ```
