@@ -43,12 +43,36 @@ Since there are many cf CLI commands available, it can be a bit overwhelming to 
 
 **NOTE**: The Windows command prompt does not natively support bash prior to Windows 10, which is required for commands like grep. To use grep, you either have to use the git-bash shell provided during a git install, or in current releases of Windows, use the bash command in a Windows Command Prompt after installing the Windows Linux Subsystem. [Windows Reference Documentation here](https://docs.microsoft.com/en-us/windows/wsl/install-win10) 
 
-## Targeting SAP cf API endpoint
+## Deploying an application to Cloud Foundry
+Now we just want to push a simple application to see it run on Cloud Foundry. To do that, we must do a few things:
+1. Set the target Cloud Foundry instance so that our cf CLI knows where we are pushing our application bits. 
+2. Log in to the targeted Cloud Foundry instance using the cf CLI.
+3. Push our simple app.
+
+### Step 1: Targeting SAP cf API endpoint
 ```$ cf api  https://api.cf.sap.hana.ondemand.com```
 
 ![cf-api-target.JPG.JPG picture](/images/cf-api-target.JPG)
 
-## Logging into the Cloud Foundry API endpoint
+### Step 2: Logging into the Cloud Foundry API endpoint
 ```$ cf login```
 
 ![cf-login.JPG picture](/images/cf-login.JPG)
+
+### Step 3: Pushing a simple application
+
+Downloading the [app code](./codes/demo)
+
+Push the app to Cloud Foundry:
+
+```$ cf push```
+
+The app will be pushed to Cloud Foundry, and in the Terminal output you will see the URL to open in your browser in order to view the running application, like the following:
+
+![cf-push picture](./images/cf-push.JPG)
+
+In the preceding example output, the running app can be found at https://cfktdemo.cfapps.sap.hana.ondemand.com/hello/daisy
+
+Opening the browser will reveal the world's simplest Cloud Foundry application in all its glorious simplicity:
+![hello picture](./images/hello-daisy.JPG)
+Congratulations! You've just deployed an application to Cloud Foundry.
