@@ -17,7 +17,7 @@ Install the cf CLI by following the instructions for your operating system:
 ## Initial setup of the cf CLI 
 After you've installed the cf CLI, verify that it works properly by typing the following command:
 
-***$ cf***
+```$ cf```
 
 If all goes well, you should see the cf CLI help text appear, looking something like this:
 
@@ -25,7 +25,29 @@ If all goes well, you should see the cf CLI help text appear, looking something 
 
 to see the version of the cf CLI that is installed, type the following command:
 
-***$ cf --version***
+```$ cf --version```
 
+## The cf CLI help command
+Perhaps the most useful command when starting out with the cf CLI is this:
 
+```$cf help```
 
+This allows you to see the available CLI commands and understand their usage and syntax. The cf CLI enables you to control a wide range of commands that help you deploy and configure your applications on Cloud Foundry.
+
+## Finding cf CLI commands
+Since there are many cf CLI commands available, it can be a bit overwhelming to find the command you are really interested in at a given point. If you have it available on your system, you can find commands containing cf CLI keywords using grep:
+
+```$cf help | grep 'service'```
+
+![grep-enabled-in-git-bash picture](/images/grep-enabled-in-git-bash.JPG)
+
+**NOTE**: The Windows command prompt does not natively support bash prior to Windows 10, which is required for commands like grep. To use grep, you either have to use the git-bash shell provided during a git install, or in current releases of Windows, use the bash command in a Windows Command Prompt after installing the Windows Linux Subsystem. [Windows Reference Documentation here](https://docs.microsoft.com/en-us/windows/wsl/install-win10) 
+
+## Targeting SAP cf API endpoint
+```$cf api  https://api.cf.sap.hana.ondemand.com```
+![cf-api-target.JPG.JPG picture](/images/cf-api-target.JPG)
+
+## Logging into the Cloud Foundry API endpoint
+```$cf login```
+
+![cf-login.JPG picture](/images/cf-login.JPG)
