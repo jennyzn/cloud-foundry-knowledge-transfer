@@ -69,7 +69,7 @@ mvn package
 
 3. Under root folder, build the MTA artifact. Run:
 ```bash
-java -jar mta_archive_builder-1.1.7.jar --build-target CF --mtar ./target/tkm-srv.mtar build
+java -jar mta_archive_builder-1.1.19.jar --build-target CF --mtar ./target/tkm-srv.mtar build
 ```
 
 4. Under root folder, deploy the MTA artifact. Run:
