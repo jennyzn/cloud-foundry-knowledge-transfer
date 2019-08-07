@@ -1,5 +1,5 @@
 # One Sheet Cloud Foundry CLI
-This is a summary for ofen used CLI targeting for SAP developers to search and learn.
+This is a summary for often used CLI targeting for SAP developers to search and learn.
 ## Cloud Foundry Native CLI
 ### Basics
 + **API selection** ```cf api```
